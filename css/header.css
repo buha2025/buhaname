@@ -1,0 +1,25 @@
+.site-header {
+  background: #004080;
+  color: white;
+  padding: 10px 0;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.main-nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}

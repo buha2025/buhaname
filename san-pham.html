@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Danh sách sản phẩm - BUHA</title>
+<link href="css/layout.css" rel="stylesheet"/>
+<link href="css/header.css" rel="stylesheet"/>
+<link href="css/footer.css" rel="stylesheet"/>
+<link href="css/san-pham.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="header"></div>
+<div class="page-container">
+<h2>Danh sách sản phẩm</h2>
+<div class="product-grid">
+<div class="product-card fade-in">
+<a href="SanPham1.html">
+<img alt="BUHA BL-400" src="images/SanPham1_1.jpg"/>
+<h3>BUHA BL-400</h3>
+<p class="price">1.250.000₫</p>
+</a>
+</div>
+<div class="product-card fade-in">
+<a href="SanPham2.html">
+<img alt="BUHA BL-410" src="images/SanPham2_1.jpg"/>
+<h3>BUHA BL-410</h3>
+<p class="price">1.350.000₫</p>
+</a>
+</div>
+<div class="product-card fade-in">
+<a href="SanPham3.html">
+<img alt="BUHA BL-420" src="images/SanPham3_1.jpg"/>
+<h3>BUHA BL-420</h3>
+<p class="price">1.550.000₫</p>
+</a>
+</div>
+</div>
+</div>
+<div id="footer"></div>
+
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

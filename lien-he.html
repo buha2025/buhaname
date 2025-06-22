@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Liên hệ - BUHA</title>
+<link href="css/layout.css" rel="stylesheet"/>
+<link href="css/header.css" rel="stylesheet"/>
+<link href="css/footer.css" rel="stylesheet"/>
+<link href="css/lien-he.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="header"></div>
+<div class="page-container">
+<h2>Liên hệ với chúng tôi</h2>
+<form class="contact-form">
+<label>Họ và tên:</label>
+<input name="name" required="" type="text"/>
+<label>Email:</label>
+<input name="email" required="" type="email"/>
+<label>Số điện thoại:</label>
+<input name="phone" type="tel"/>
+<label>Nội dung:</label>
+<textarea name="message" required="" rows="5"></textarea>
+<button type="submit">Gửi liên hệ</button>
+</form>
+</div>
+<div id="footer"></div>
+
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+.product-detail-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+}
+.product-images {
+  flex: 1 1 45%;
+}
+.product-purchase-info {
+  flex: 1 1 45%;
+}
+.main-image {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.thumbs-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.thumbs-row img {
+  width: 60px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.thumbs-row img.active {
+  border-color: #004080;
+}
+.product-purchase-info .price {
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+.product-support ul {
+  padding-left: 20px;
+}
+.purchase-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.purchase-buttons .quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.purchase-buttons input[type=number] {
+  width: 50px;
+  padding: 4px;
+}
+.buy-now {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.fast-delivery {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+}
+.fast-delivery.green {
+  background-color: green;
+  color: white;
+}
+.fast-delivery.red {
+  background-color: #cc0000;
+  color: white;
+}
+.product-description {
+  padding: 30px 40px;
+}

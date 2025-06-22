@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<style>
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BUHA - Bộ đàm chất lượng cao</title>
+<link href="css/layout.css" rel="stylesheet"/>
+<link href="css/header.css" rel="stylesheet"/>
+<link href="css/footer.css" rel="stylesheet"/>
+<link href="css/index.css" rel="stylesheet"/>
+<meta content="Bộ đàm BUHA chất lượng, uy tín, giá rẻ. Sản phẩm có đầy đủ giấy chứng nhận nhập khẩu, đã được đo lường, kiểm định chất lượng và thông số kỹ thuật tại các cơ quan chức năng" name="description"/>
+</head>
+<body>
+<div id="header"></div>
+<div class="page-container">
+<section class="gioi-thieu">
+<h1>Giới thiệu sản phẩm bộ đàm BUHA</h1>
+<p><strong>BUHA </strong>là dòng bộ đàm mới nhất được nhập khẩu chính hãng bởi <strong>Công ty TNHH Thương mại &amp; Dịch vụ An Phong Việt Nam</strong>, mang đến giải pháp liên lạc chuyên nghiệp, ổn định và bảo mật cho mọi nhu cầu công việc. Với sản phẩm đa dạng thiết kế chắc chắn, hiện đại và khả năng hoạt động mạnh mẽ, <strong>BUHA</strong> là lựa chọn lý tưởng cho các đơn vị từ nhà hàng, quán ăn, bảo vệ, xây dựng, nhà xưởng, công trình, tổ chức sự kiện, và các ngành yêu cầu liên lạc tức thì trong môi trường nhiều nhiễu động.</p>
+<p>Sản phẩm có đầy đủ giấy chứng nhận nhập khẩu, đã được đo lường, kiểm định chất lượng và thông số kỹ thuật tại các cơ quan chức năng nhà nước, đảm bảo đáp ứng các tiêu chuẩn kỹ thuật và an toàn khi sử dụng tại Việt Nam. Bộ đàm <strong>BUHA</strong> không chỉ nổi bật ở khả năng thu phát ổn định trong phạm vi xa, mà còn tích hợp nhiều công nghệ hỗ trợ hiện đại như lọc nhiễu thông minh, tiết kiệm pin, âm thanh to – rõ – trung thực.</p>
+<p>Sản phẩm <strong>BUHA</strong> được bảo hành 2 năm với dịch vụ tốt nhất.</p>
+</section>
+<section class="san-pham-noi-bat">
+<h2>Sản phẩm nổi bật</h2>
+
+<div class="product-highlight">
+<div class="product-img">
+<img alt="BUHA BL-390" src="images/bo dam buha 2025.jpg"/>
+</div>
+<div class="product-content">
+<h3>BUHA BL-390</h3>
+<p>Bộ đàm công suất cao, pin lâu, thiết kế nhỏ gọn tiện lợi.</p>
+<p class="price">1.250.000₫</p>
+<a class="btn" href="SanPham1.html">Xem chi tiết</a>
+</div>
+</div>
+
+<div class="product-highlight">
+<div class="product-img">
+<img alt="BUHA BL-390" src="images/bo dam buha 2025.jpg"/>
+</div>
+<div class="product-content">
+<h3>BUHA BL-390</h3>
+<p>Bộ đàm công suất cao, pin lâu, thiết kế nhỏ gọn tiện lợi.</p>
+<p class="price">1.250.000₫</p>
+<a class="btn" href="SanPham1.html">Xem chi tiết</a>
+</div>
+</div>
+
+</section>
+<section class="tin-tuc">
+<h2>Tin tức mới nhất</h2>
+<div class="news-carousel">
+<div class="news-card fade-in">
+<img alt="news1" src="images/news1.jpg"/>
+<h3>Mẹo sử dụng bộ đàm hiệu quả</h3>
+</div>
+<div class="news-card fade-in">
+<img alt="news2" src="images/news2.jpg"/>
+<h3>Cách lựa chọn bộ đàm công trình</h3>
+</div>
+<div class="news-card fade-in">
+<img alt="news3" src="images/news3.jpg"/>
+<h3>Tại sao nên chọn BUHA?</h3>
+</div>
+</div>
+</section>
+</div>
+<div id="footer"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeEls.forEach(el => observer.observe(el));
+});
+</script>
+
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+</body>
+</html>
